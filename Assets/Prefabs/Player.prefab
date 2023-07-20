@@ -182,8 +182,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralFirePoint: {fileID: 470107307257195608}
+  leftFirePoint: {fileID: 0}
+  rightFirePoint: {fileID: 0}
+  currentFireMode: 0
   bulletPrefab: {fileID: 7482815069574905675, guid: 6ef5a216e8d14a44abeb8f8a13e7e742, type: 3}
   bulletForce: 10
+  isPoweredUp: 0
+  powerUpTimer: 0
 --- !u!1 &6705427636716358839
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +262,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e537d1b9459aa8144b5a1b1f52385cf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d64d09e4ea64e24aae04f4bcabe33cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
