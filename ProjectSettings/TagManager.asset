@@ -41,9 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3022117303
+    locked: 0
   - name: Ships
     uniqueID: 371015571
     locked: 0
-  - name: UI
+  - name: UI Frame
     uniqueID: 2207041539
+    locked: 0
+  - name: UI
+    uniqueID: 962857193
     locked: 0
