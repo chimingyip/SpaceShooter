@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BulletCooldownTimer : MonoBehaviour
 {
-  public float cooldownAmount = 0.2f;
   private float m_cooldownCompleteTime;
   public bool CooldownComplete => Time.time > m_cooldownCompleteTime;
 
-  public void StartCooldown() {
+  public void StartCooldown(float cooldownAmount) {
     m_cooldownCompleteTime = Time.time + cooldownAmount;
   }
 }
