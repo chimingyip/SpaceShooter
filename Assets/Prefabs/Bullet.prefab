@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 371015571
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 67810a6afef75574da37aa7b954184ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4326576560411501474}
   - component: {fileID: 8041896902368484562}
   - component: {fileID: 8593886585422587000}
+  - component: {fileID: 5307667474558880373}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -174,7 +175,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0011768937, y: 0.030365705}
@@ -190,3 +191,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12674952, y: 0.31787175}
   m_EdgeRadius: 0
+--- !u!114 &5307667474558880373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482815069574905675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3c4eb848e61ac4d9c1729a1bf86d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
+  explosionDestroyTime: 0.3
+  damage: 20
