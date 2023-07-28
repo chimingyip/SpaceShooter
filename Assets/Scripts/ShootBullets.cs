@@ -3,20 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootBullets : MonoBehaviour {
-  [SerializeField] private Transform centralFirePoint, leftFirePoint, rightFirePoint;
+  [Header("Firing Variables")]
+  [SerializeField] private Transform centralFirePoint;
+  [SerializeField] private Transform leftFirePoint;
+  [SerializeField] private Transform rightFirePoint;
+
   public enum FireMode {
     Single, 
     Double, 
     Triple
   }
-  [SerializeField] private FireMode currentFireMode = FireMode.Single;
+  public FireMode currentFireMode = FireMode.Single;
+  private bool isFiring = false;
+
+  [Header("Bullet Data")]
   [SerializeField] private GameObject bulletPrefab;
   [SerializeField] private float bulletForce = 20f;
+
+  [Header("Cooldowns")]
   [SerializeField] private float cooldownAmount = 0.2f;
-  [SerializeField] private float powerUpTimer;
-  private bool isFiring = false;
-  private bool isPoweredUp = false;
   private BulletCooldownTimer bulletCooldownTimer;
+
+  [Header("Power ups")]
+  public bool isPoweredUp = false;
+  public float powerUpTimer;
 
   private void Awake() {
     bulletCooldownTimer = gameObject.AddComponent<BulletCooldownTimer>();
@@ -32,7 +42,7 @@ public class ShootBullets : MonoBehaviour {
 
         if (powerUpTimer <= 0) {
           currentFireMode = FireMode.Single;
-          // powerUpTimer = 0;
+          powerUpTimer = 0;
           isPoweredUp = false;
         }
       }

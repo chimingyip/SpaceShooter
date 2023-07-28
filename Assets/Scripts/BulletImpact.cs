@@ -11,6 +11,7 @@ public class BulletImpact : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         // GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
         DamageTarget target = collision.GetComponent<DamageTarget>();
+        Debug.Log(collision);
 
         if (target) {
             target.TakeDamage(damage);
