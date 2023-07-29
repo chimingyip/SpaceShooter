@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8151165123563188366}
   - component: {fileID: 3020577517944342903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Sprite '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1444836863775684675}
   - component: {fileID: 3460968028768396919}
   - component: {fileID: 1087489697628736397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.029630184, y: 0}
@@ -217,5 +217,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709b1df8706e7bb4481a3dc6fd22d763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBullet: {fileID: 0}
-  player: {fileID: 6541384247369573626, guid: f0e2ef745cddf55429261662ced30cba, type: 3}
+  powerUpSO: {fileID: 11400000, guid: 41f1f97029f28da43928352fbc59a5ac, type: 2}
+  bullet: {fileID: 5307667474558880373, guid: 6ef5a216e8d14a44abeb8f8a13e7e742, type: 3}

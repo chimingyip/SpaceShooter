@@ -33,6 +33,7 @@ public class ShootBullets : MonoBehaviour {
   }
 
   private void FixedUpdate() {
+    Debug.Log(currentFireMode);
     if (isFiring) {
       if (!bulletCooldownTimer.CooldownComplete) return;
       bulletCooldownTimer.StartCooldown(cooldownAmount);

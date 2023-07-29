@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-  public GameObject enemyBullet;
-  public GameObject player;
+  public PowerUpSO powerUpSO;
+  [SerializeField] private Bullet bullet;
 
-  private ShootBullets playerShooting;
-
-  private void OnCollisionEnter2D(Collision2D collision)
-  {
-    Debug.Log("Hit powerup");
-    // ** Set up tags if enemies end up needing to shoot and could potentially hit the powerup
-    // if (collision.gameObject.tag == "enemy")
-    // {
-    //     Physics2D.IgnoreCollision(enemyBullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-    // }
-    playerShooting = player.GetComponent<ShootBullets>();
-    playerShooting.currentFireMode = ShootBullets.FireMode.Double;
-    playerShooting.isPoweredUp = true;
-    playerShooting.powerUpTimer = 0.3f;
+  private void OnTriggerEnter2D(Collider2D collision) {
     Destroy(gameObject);
+    if (collision.gameObject.tag == "Bullet") {
+      Debug.Log(true);      
+      // Debug.Log(bullet.shooter);      
+      powerUpSO.ApplyEffect(bullet.shooter);
+    } else {
+      Debug.Log(false);      
+      powerUpSO.ApplyEffect(collision.gameObject);
+    }
   }
 }

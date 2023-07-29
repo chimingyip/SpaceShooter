@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7436128535806200815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489186544960084629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,8 @@ GameObject:
   - component: {fileID: 7470942397318416893}
   - component: {fileID: 4522135126823261886}
   - component: {fileID: 1883967840196228031}
-  m_Layer: 0
+  - component: {fileID: 52840173546856136}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,14 +121,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6541384247369573626}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -182,13 +183,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centralFirePoint: {fileID: 470107307257195608}
-  leftFirePoint: {fileID: 0}
-  rightFirePoint: {fileID: 0}
+  leftFirePoint: {fileID: 7436128535806200815}
+  rightFirePoint: {fileID: 2489186544960084629}
   currentFireMode: 0
   bulletPrefab: {fileID: 7482815069574905675, guid: 6ef5a216e8d14a44abeb8f8a13e7e742, type: 3}
   bulletForce: 15
+  cooldownAmount: 0.2
   isPoweredUp: 0
   powerUpTimer: 0
+--- !u!60 &52840173546856136
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541384247369573626}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0037100092, y: 0.7328787}
+      - {x: -0.5132746, y: 0.082706004}
+      - {x: -0.5172948, y: -0.10782397}
+      - {x: 0.0035483614, y: -0.19686413}
+      - {x: 0.5133593, y: -0.114430904}
+      - {x: 0.52440464, y: 0.06786603}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6705427636716358839
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071864479787942988}
   - component: {fileID: 4803387769036820796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +313,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 371015571
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e537d1b9459aa8144b5a1b1f52385cf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -282,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8213809984453005456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470107307257195608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Central Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
