@@ -9,6 +9,7 @@ public class PowerUp : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D collision) {
     Destroy(gameObject);
+    // If you want to try and get shooting to activate powerups working, remember to turn on powerup-bullet collisions in the collision matrix
     if (collision.gameObject.tag == "Bullet") {
       Debug.Log(true);      
       // Debug.Log(bullet.shooter);      

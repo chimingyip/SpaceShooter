@@ -10,10 +10,6 @@ public class PlayerController : MonoBehaviour
 
   private Vector2 moveInput;
 
-  private void Start() {
-    // rb = GetComponent<Rigidbody2D>();
-  }
-
   private void FixedUpdate() {
     PlayerMovementBoundaries();
     transform.Translate(moveInput * moveSpeed * Time.deltaTime);

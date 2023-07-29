@@ -10,13 +10,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int damage;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-
-        // if (collision.gameObject == shooter) {
-        //     return;
-        // }
         // GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
         DamageTarget target = collision.GetComponent<DamageTarget>();
-        // Debug.Log(collision);
 
         if (target) {
             target.TakeDamage(damage);
