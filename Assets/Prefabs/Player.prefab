@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 7470942397318416893}
   - component: {fileID: 4522135126823261886}
   - component: {fileID: 1883967840196228031}
+  - component: {fileID: 2475491826060392271}
   - component: {fileID: 52840173546856136}
   m_Layer: 6
   m_Name: Player
@@ -193,6 +194,18 @@ MonoBehaviour:
   cooldownAmount: 0.2
   isPoweredUp: 0
   powerUpTimer: 0
+--- !u!114 &2475491826060392271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541384247369573626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e11f4114dcaa14ca64432aaa6fc215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &52840173546856136
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -222,7 +235,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
