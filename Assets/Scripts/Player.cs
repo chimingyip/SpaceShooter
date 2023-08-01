@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     }
   }
 
-  private void LoseLife() { 
+  public void LoseLife() { 
     lives--;
 
     if (lives < 1) {
