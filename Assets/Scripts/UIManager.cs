@@ -21,8 +21,6 @@ public class UIManager : MonoBehaviour
     }
 
     private void UpdateLives() {
-        // pop off the array
-        heartsArray[heartsArray.Length - 1] = 
-        // heartsArray.pop();
+        
     }
 }
