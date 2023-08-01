@@ -1,26 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    // store sprites as an array
-    // pop off the end of the array to match the lives variable in Player
-
-// -------------------
     // Score tracking
-    [SerializeField] private GameObject heart1;
-    [SerializeField] private GameObject heart2;
-    [SerializeField] private GameObject heart3;
-    [SerializeField] private GameObject heart4;
 
-    private GameObject[] heartsArray;
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private int numOfHearts = 4;
+    [SerializeField] private Sprite heartSprite;
 
-    private void Start() {
-        heartsArray = new GameObject[] {heart1, heart2, heart3, heart4};
-    }
-
-    private void UpdateLives() {
-        
+    private void Update() {
+        for (int i = 0; i < hearts.Length; i++) {
+            if (i < Player.instance.lives) {
+                hearts[i].enabled = true;
+            } else {
+                hearts[i].enabled = false;
+            }
+        }
     }
 }

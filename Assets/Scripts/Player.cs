@@ -3,18 +3,24 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-  // private Rigidbody2D rb;
+  public static Player instance { get; private set; }
+
   [SerializeField] private float moveSpeed = 1f;
   [SerializeField] private float rightMoveBoundary = 1f;
   [SerializeField] private float leftMoveBoundary = -1f;
 
-  [SerializeField] private int _lives = 4;
-  public int Lives { get => _lives; }
+  public int lives = 4;
 
   private Vector2 moveInput;
 
+  private void Start() {
+    if (instance == null) {
+      instance = this;
+    }
+  }
+
   private void FixedUpdate() {
-    Debug.Log(_lives);
+    Debug.Log(lives);
     PlayerMovementBoundaries();
     transform.Translate(moveInput * moveSpeed * Time.deltaTime);
   }
@@ -39,9 +45,9 @@ public class Player : MonoBehaviour
   }
 
   private void LoseLife() { 
-    _lives--;
+    lives--;
 
-    if (_lives < 1) {
+    if (lives < 1) {
       // load game over UI
     }
   }
