@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
     // Score tracking
 
     [SerializeField] private Image[] hearts;
-    [SerializeField] private int numOfHearts = 4;
     [SerializeField] private Sprite heartSprite;
 
     private void Update() {
