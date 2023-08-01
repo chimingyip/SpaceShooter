@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
     lives--;
 
     if (lives < 1) {
+      Destroy(gameObject);
       // load game over UI
     }
   }
