@@ -206,4 +206,4 @@ MonoBehaviour:
   shooter: {fileID: 6541384247369573626, guid: f0e2ef745cddf55429261662ced30cba, type: 3}
   hitEffect: {fileID: 0}
   explosionDestroyTime: 0.3
-  damage: 20
+  damage: 34
