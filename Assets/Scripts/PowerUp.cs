@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,16 +9,14 @@ public class PowerUp : MonoBehaviour
   [SerializeField] private Bullet bullet;
 
   private void OnCollisionEnter2D(Collision2D collision) {
-    // If you want to try and get shooting to activate powerups working, remember to turn on powerup-bullet collisions in the collision matrix
-    if (collision.gameObject.tag == "Bullet") {
-      Debug.Log(true);      
-      // Debug.Log(bullet.shooter);      
-      powerUpSO.ApplyEffect(bullet.shooter);
-    } else {
-      Debug.Log(false);      
-      powerUpSO.ApplyEffect(collision.gameObject);
-    }
-        Destroy(gameObject);
-
+    if (!collision.gameObject.CompareTag("Player")) return;
+    powerUpSO.ApplyEffect(collision.gameObject);
+    StartCoroutine(WaitForPowerUpTimeout(collision.gameObject));
+    gameObject.transform.localScale = new Vector3(0, 0, 0);
+  }
+  
+  IEnumerator WaitForPowerUpTimeout(GameObject player) {
+    yield return new WaitForSeconds(powerUpSO.Duration);
+    powerUpSO.ResetEffect(player, gameObject);
   }
 }

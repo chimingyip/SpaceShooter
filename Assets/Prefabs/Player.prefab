@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 52840173546856136}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   moveSpeed: 5
   rightMoveBoundary: 4.298
   leftMoveBoundary: -4.298
+  lives: 4
 --- !u!50 &7470942397318416893
 Rigidbody2D:
   serializedVersion: 4
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e11f4114dcaa14ca64432aaa6fc215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lives: 4
 --- !u!60 &52840173546856136
 PolygonCollider2D:
   m_ObjectHideFlags: 0

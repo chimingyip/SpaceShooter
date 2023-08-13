@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3460968028768396919}
   - component: {fileID: 1087489697628736397}
   m_Layer: 8
-  m_Name: Power Up
+  m_Name: Double Shot Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
