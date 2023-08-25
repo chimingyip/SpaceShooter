@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private float enemySpawnWaitTime = 2f;
-    [SerializeField] private float powerUpSpawnWaitTime = 15f;
+    [SerializeField] private float powerUpSpawnWaitTime = 30f;
 
 
     private void Start() {
