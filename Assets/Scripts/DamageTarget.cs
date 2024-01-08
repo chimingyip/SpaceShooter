@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageTarget : MonoBehaviour
 {
     public int health = 100;
-    public GameObject deathEffect;
+    public GameObject explosionPrefab;
     private bool isDestroyed = false;
 
     public void TakeDamage(int damage) {
@@ -20,6 +20,7 @@ public class DamageTarget : MonoBehaviour
             }
             isDestroyed = true;
             Destroy(gameObject);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
     }
 }

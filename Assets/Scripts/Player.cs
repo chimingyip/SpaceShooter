@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
   public static Player instance { get; private set; }
 
+  public GameObject explosionPrefab;
+
   [SerializeField] private float moveSpeed = 1f;
   [SerializeField] private float rightMoveBoundary = 1f;
   [SerializeField] private float leftMoveBoundary = -1f;
@@ -21,7 +23,6 @@ public class Player : MonoBehaviour
   }
 
   private void FixedUpdate() {
-    Debug.Log(lives);
     PlayerMovementBoundaries();
     transform.Translate(moveInput * moveSpeed * Time.deltaTime);
   }
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
     // destroy the enemy game object and remove a player life
     if (collision.gameObject.tag == "Enemy") {
       Destroy(collision.gameObject);
+      Instantiate(explosionPrefab, collision.gameObject.transform.position, Quaternion.identity);
       LoseLife();
     }
   }
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
 
     if (lives < 1) {
       Destroy(gameObject);
-      // load game over UI
+      Instantiate(explosionPrefab, transform.position, Quaternion.identity);
     }
   }
 }
