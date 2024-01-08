@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
   public static Player instance { get; private set; }
 
   public GameObject explosionPrefab;
+  public GameObject gameOverScreen;
 
   [SerializeField] private float moveSpeed = 1f;
   [SerializeField] private float rightMoveBoundary = 1f;
@@ -53,6 +54,8 @@ public class Player : MonoBehaviour
     if (lives < 1) {
       Destroy(gameObject);
       Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+      gameOverScreen.SetActive(true);
+      Time.timeScale = 0f;
     }
   }
 }
