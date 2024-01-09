@@ -10,6 +10,7 @@ public class PowerUp : MonoBehaviour
 
   private void OnCollisionEnter2D(Collision2D collision) {
     if (!collision.gameObject.CompareTag("Player")) return;
+    SoundEffectsManager.instance.PlayPowerUpPickUpSound();
     powerUpSO.ApplyEffect(collision.gameObject);
     StartCoroutine(WaitForPowerUpTimeout(collision.gameObject));
     gameObject.transform.localScale = new Vector3(0, 0, 0);

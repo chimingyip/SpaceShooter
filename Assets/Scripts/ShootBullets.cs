@@ -52,6 +52,7 @@ public class ShootBullets : MonoBehaviour {
           GameObject bullet = Instantiate(bulletPrefab, centralFirePoint.position, centralFirePoint.rotation);
           Rigidbody2D centralRb = bullet.GetComponent<Rigidbody2D>();
           centralRb.AddForce(centralFirePoint.up * bulletForce, ForceMode2D.Impulse);
+          SoundEffectsManager.instance.PlayLaserSound();
           break;
         case FireMode.Double:
           GameObject rightBullet = Instantiate(bulletPrefab, rightFirePoint.position, rightFirePoint.rotation);
@@ -60,6 +61,7 @@ public class ShootBullets : MonoBehaviour {
 					GameObject leftBullet = Instantiate(bulletPrefab, leftFirePoint.position, leftFirePoint.rotation);
 					Rigidbody2D leftRb = leftBullet.GetComponent<Rigidbody2D>();
 					leftRb.AddForce(leftFirePoint.up * bulletForce, ForceMode2D.Impulse);
+          SoundEffectsManager.instance.PlayPoweredUpLaserSound();
           break;
       }
     }

@@ -8,6 +8,7 @@ public class EndzoneCollision : MonoBehaviour
         if (collision.tag == "Endzone") {
             Destroy(gameObject);
             Player.instance.LoseLife();
+            SoundEffectsManager.instance.PlayEndzoneReachedSound();
         }
     }
 }

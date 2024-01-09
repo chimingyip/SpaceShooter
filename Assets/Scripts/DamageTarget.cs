@@ -17,6 +17,7 @@ public class DamageTarget : MonoBehaviour
             if (gameObject.CompareTag("Enemy"))
             {
                 ScoreManager.instance.UpdateScore(1);
+                SoundEffectsManager.instance.PlayEnemyExplosionSound();
             }
             isDestroyed = true;
             Destroy(gameObject);

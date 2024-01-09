@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     if (collision.gameObject.tag == "Enemy") {
       Destroy(collision.gameObject);
       Instantiate(explosionPrefab, collision.gameObject.transform.position, Quaternion.identity);
+      SoundEffectsManager.instance.PlayEnemyExplosionSound();
       LoseLife();
     }
   }
@@ -54,8 +55,9 @@ public class Player : MonoBehaviour
     if (lives < 1) {
       Destroy(gameObject);
       Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+      SoundEffectsManager.instance.PlayPlayerExplosionSound();
       gameOverScreen.SetActive(true);
-      Time.timeScale = 0f;
+      Time.timeScale = 0.3f;
     }
   }
 }
