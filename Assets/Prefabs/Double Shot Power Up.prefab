@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1408178938957645661}
   - component: {fileID: 1444836863775684675}
   - component: {fileID: 3460968028768396919}
-  - component: {fileID: 1087489697628736397}
+  - component: {fileID: 1917032635514483975}
   m_Layer: 8
   m_Name: Double Shot Power Up
   m_TagString: Untagged
@@ -205,7 +205,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57487154, y: 0.5156112}
   m_EdgeRadius: 0
---- !u!114 &1087489697628736397
+--- !u!114 &1917032635514483975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,8 +214,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4934024577605971214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709b1df8706e7bb4481a3dc6fd22d763, type: 3}
+  m_Script: {fileID: 11500000, guid: 86301a21bd7352e49baae613f77bc525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpSO: {fileID: 11400000, guid: 41f1f97029f28da43928352fbc59a5ac, type: 2}
   bullet: {fileID: 5307667474558880373, guid: 6ef5a216e8d14a44abeb8f8a13e7e742, type: 3}
+  UIManager: {fileID: 0}
